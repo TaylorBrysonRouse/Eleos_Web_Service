@@ -1,0 +1,20 @@
+{
+  "name": "webserviceproject",
+  "version": "1.0.0",
+  "description": "Web Service",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Taylor Rouse",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "jwt-encode": "^1.0.1",
+    "mongoose": "^6.1.1"
+  }
+}
