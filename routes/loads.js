@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     try {
       var authToken = req.headers.authorization.split("=")[1];
       if(!(await authorize(authToken))){
-        res.status(401).send("Error: Invalid User Token!!!");
+        res.status(401).send("Error: Invalid User Token!!");
       }
       else {
         Loads.find()
