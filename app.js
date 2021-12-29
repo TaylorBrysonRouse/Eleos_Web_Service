@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 // Initiate App
 const app = express();
 
+// Connect to Database
 const db = require('./config/dbkey').mongoURI
 
 mongoose
@@ -27,6 +28,6 @@ app.use('/loads', loads);
 app.use('/messages', messages);
 
 // Start Server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Server Started on Port ${PORT}!!!`));
