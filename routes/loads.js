@@ -10,7 +10,7 @@ const Loads = require('../models/Loads');
 
 authorize = async (token) => {
     var jwtDecode = jwt_decode(token);
-    var username = jwtDecode.username;
+    var username = jwtDecode["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
     var user = await Users.findOne({username: username}).exec();
     return user;
 }

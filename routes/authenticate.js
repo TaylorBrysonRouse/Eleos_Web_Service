@@ -15,9 +15,9 @@ router.get('/:token', function(req, res){
     }
   else {
     var jwtDecode = jwt_decode(req.params.token);
-      Users.findOne({ username: jwtDecode.username})
+      Users.findOne({ username: jwtDecode["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"]})
         .then((user) => {
-            user.api_token = jwt_encode({username: user.username, full_name: user.full_name }, secret,);
+            user.api_token = jwt_encode({"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": user.username, "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name": user.full_name }, secret,);
             res.send(user)
           }).catch((err) => {
              console.log(err);
