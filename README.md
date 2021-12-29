@@ -14,10 +14,10 @@ Endpoints:
 
 Concepts/Tools I learned for this project:
 
-Markup: *Postman
-*JavaScript
-*NodeJS
-*ExpressJS
-*MongoDB
-*Heroku
-*REST API
+- Postman
+- JavaScript
+- NodeJS
+- ExpressJS
+- MongoDB
+- Heroku
+- REST API
