@@ -20,4 +20,4 @@ Concepts/Tools used:
 - ExpressJS
 - MongoDB
 - Heroku
-- REST API
+
