@@ -40,6 +40,4 @@ router.get('/', async (req, res) => {
   }
 });
 
-
-// Loads auth still not working returning both resolve and reject / look over carsons for ref
 module.exports = router;
