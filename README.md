@@ -2,10 +2,21 @@
 
 The Authentication Service for the Eleos QA App
 
+Base URL: https://taylor-web-service.herokuapp.com/
+
 Endpoints:
 
-/authenticate
+  /authenticate
 
-/loads
+  /loads
 
-/messages
+  /messages
+
+Concepts/Tools I learned for this project:
+Postman
+JavaScript
+NodeJS
+ExpressJS
+MongoDB
+Heroku
+REST API
