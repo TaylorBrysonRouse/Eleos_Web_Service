@@ -13,7 +13,8 @@ Endpoints:
   /messages
 
 Concepts/Tools I learned for this project:
-*Postman
+
+Markup: *Postman
 *JavaScript
 *NodeJS
 *ExpressJS
