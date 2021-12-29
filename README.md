@@ -13,10 +13,10 @@ Endpoints:
   /messages
 
 Concepts/Tools I learned for this project:
-Postman
-JavaScript
-NodeJS
-ExpressJS
-MongoDB
-Heroku
-REST API
+*Postman
+*JavaScript
+*NodeJS
+*ExpressJS
+*MongoDB
+*Heroku
+*REST API
