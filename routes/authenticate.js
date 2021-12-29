@@ -6,8 +6,6 @@ const jwt_decode = require('jwt-decode');
 const jwt_encode = require('jwt-encode');
 const router = express.Router();
 
-const secret = 'iM-a-HeLlO-kItTy';
-
 const Users = require('../models/Users');
 
 
@@ -19,7 +17,7 @@ router.get('/:token', function(req, res){
     var jwtDecode = jwt_decode(req.params.token);
       Users.findOne({ username: jwtDecode["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"]})
         .then((user) => {
-            user.api_token = jwt_encode({"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": user.username, "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name": user.full_name }, secret,);
+          user.api_token = jwt_encode({"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": user.username, "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name": user.full_name }, process.env.SECRET);
             res.send(user)
           }).catch((err) => {
              console.log(err);
