@@ -12,7 +12,7 @@ Endpoints:
 
   /messages
 
-Concepts/Tools I learned for this project:
+Concepts/Tools used:
 
 - Postman
 - JavaScript
