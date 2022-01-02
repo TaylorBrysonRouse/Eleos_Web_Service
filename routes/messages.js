@@ -12,6 +12,7 @@ router.put('/:handle', (req, res) => {
     res.status(401).send("401: Invalid Eleos Platform Key");
   }
   else {
+    try {
         const newMessage = new Message ({
             direction: req.body.direction,
             username: req.body.username,
@@ -23,6 +24,11 @@ router.put('/:handle', (req, res) => {
 
 
         newMessage.save().then(res.json(req.params.handle))
+        }
+        catch(err){
+          console.log(err);
+          res.send('Error: ' + err)
+        }
       }
 })
 
