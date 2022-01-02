@@ -13,25 +13,16 @@ router.put('/:handle', (req, res) => {
   }
   else {
         const newMessage = new Message ({
-          try {
             direction: req.body.direction,
             username: req.body.username,
             message_type: req.body.message_type,
             composed_at: req.body.composed_at,
             platform_received_at: req.body.platform_received_at,
             body: req.body.body
-          }
-          catch(err){
-            console.log(err)
-          }
         })
 
-      if(err){
-        res.send('Error: Message does not have all required fields')
-      } else {
-        newMessage.save().then(res.json(req.params.handle))
-      }
 
+        newMessage.save().then(res.json(req.params.handle))
       }
 })
 
